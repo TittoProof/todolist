@@ -51,6 +51,14 @@ public class Task implements Serializable {
         this.isComplete = isComplete;
     }
 
+    public ToDoList getToDoList() {
+        return toDoList;
+    }
+
+    public void setToDoList(ToDoList toDoList) {
+        this.toDoList = toDoList;
+    }
+
     @Override
     public String toString() {
         return "Task{" + "id=" + id + ", description=" + description + ", isComplete=" + isComplete + '}';

@@ -1,8 +1,8 @@
 package ch.ricardo.project.service;
 
 import ch.ricardo.project.entity.Task;
+import ch.ricardo.project.entity.ToDoList;
 import ch.ricardo.project.repository.TaskRepository;
-import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,25 +20,45 @@ public class TaskService {
     @Autowired
     private TaskRepository taskRepository;
     
-    
-    public Task createTask() {
-        return new Task();
+    /**
+     * Create a new Task 
+     * @param task
+     * @return 
+     */
+    public Task createTask(Task task) {
+        logger.info("creating new Task: {}", task.toString());
+        return this.taskRepository.save(task);
     }
     
-    public List<Task> getAllTask() {
-        return new ArrayList();
+    /**
+     * Return all the Task for a ToDoList
+     * @param list
+     * @return 
+     */
+    public List<Task> getAllTaskForToDoList(ToDoList list) {
+        logger.info("getting all tasks for todolist: {}", list.toString());
+        return this.taskRepository.findByToDoList(list);
     }
     
+    /**
+     * Return a specific Task by his ID
+     * @param id
+     * @return 
+     */
     public Task getTask(int id) {
-        return new Task();
+        logger.info("getting task with ID: {}", id);
+        return this.taskRepository.findOne(id);
     }
     
-    public void deleteTask(int id) {
-        
-    }
     
+    /**
+     * update a task passed as parameter
+     * @param task
+     * @return 
+     */
     public Task updateTask(Task task) {
-        return new Task();
+        logger.info("update task with ID: {} whit this infos: {}", task.getId(), task.toString());
+        return this.taskRepository.save(task);
     }
     
 }

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -20,7 +21,7 @@ public class ToDoList implements Serializable {
     private int Id;
     private String name;
     private String owner;
-    @OneToMany(mappedBy = "toDoList", cascade = CascadeType.ALL)
+    @OneToMany(orphanRemoval=true, fetch = FetchType.EAGER, mappedBy = "toDoList", cascade = CascadeType.ALL)
     private List<Task> tasks;
     
     public ToDoList() {

@@ -1,6 +1,5 @@
 package ch.ricardo.project.service;
 
-import ch.ricardo.project.entity.Task;
 import ch.ricardo.project.entity.ToDoList;
 import ch.ricardo.project.repository.ToDoListRepository;
 import java.util.List;

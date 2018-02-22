@@ -21,8 +21,6 @@ public class ToDoListService {
     @Autowired
     private ToDoListRepository toDoListRepository;
     
-    @Autowired
-    private TaskService taskService;
     
     /**
      * Create new todolist

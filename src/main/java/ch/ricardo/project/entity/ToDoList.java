@@ -1,6 +1,7 @@
 package ch.ricardo.project.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -21,8 +22,8 @@ public class ToDoList implements Serializable {
     private int Id;
     private String name;
     private String owner;
-    @OneToMany(orphanRemoval=true, fetch = FetchType.EAGER, mappedBy = "toDoList", cascade = CascadeType.ALL)
-    private List<Task> tasks;
+    @OneToMany(orphanRemoval = true, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Task> tasks = new ArrayList<>();
     
     public ToDoList() {
         

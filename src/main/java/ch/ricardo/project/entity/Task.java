@@ -4,8 +4,6 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 /**
  * This is a task need to complete
@@ -20,9 +18,6 @@ public class Task implements Serializable {
     private String description;
     private boolean isComplete;
     
-    @ManyToOne
-    @JoinColumn(name = "to_do_list_id")
-    private ToDoList toDoList;
 
     public Task() {
     }
@@ -49,14 +44,6 @@ public class Task implements Serializable {
 
     public void setIsComplete(boolean isComplete) {
         this.isComplete = isComplete;
-    }
-
-    public ToDoList getToDoList() {
-        return toDoList;
-    }
-
-    public void setToDoList(ToDoList toDoList) {
-        this.toDoList = toDoList;
     }
 
     @Override

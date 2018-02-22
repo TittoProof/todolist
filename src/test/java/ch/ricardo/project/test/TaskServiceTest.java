@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ch.ricardo.project.test;
 
 import ch.ricardo.project.entity.Task;
@@ -54,13 +49,11 @@ public class TaskServiceTest {
         this.t1 = new Task();
         this.t1.setDescription("a very easy task");
         this.t1.setIsComplete(false);
-        this.t1.setToDoList(todayList);
         this.taskRepository.save(this.t1);
         
         this.t2 = new Task();
         this.t2.setDescription("an incredible difficult task");
         this.t2.setIsComplete(true);
-        this.t2.setToDoList(todayList);
         this.taskRepository.save(this.t2);
         
         // initialize also a ToDoList for tests
@@ -76,7 +69,6 @@ public class TaskServiceTest {
 
     @After
     public void tearDown() {
-        this.taskRepository.deleteAll();
         this.toDoListRepository.deleteAll();
     }
 
@@ -92,13 +84,6 @@ public class TaskServiceTest {
         assertEquals(t3.getDescription(), stored.getDescription());
     }
 
-    @Test
-    public void getAllTaskForToDoListTest() {
-        List<Task> taskForToday = this.taskService.getAllTaskForToDoList(todayList);
-        assertNotNull(taskForToday);
-        assertEquals(2, taskForToday.size());
-
-    }
 
     @Test
     public void getTaskTest() {

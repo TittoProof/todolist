@@ -31,16 +31,6 @@ public class TaskService {
     }
     
     /**
-     * Return all the Task for a ToDoList
-     * @param list
-     * @return 
-     */
-    public List<Task> getAllTaskForToDoList(ToDoList list) {
-        logger.info("getting all tasks for todolist: {}", list.toString());
-        return this.taskRepository.findByToDoList(list);
-    }
-    
-    /**
      * Return a specific Task by his ID
      * @param id
      * @return 

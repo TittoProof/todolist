@@ -3,7 +3,7 @@
     <groupId>ch.ricardo.project</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ToDoList</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
     <name>ToDoList</name>
     <description>A very simple ToDoList</description>

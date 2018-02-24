@@ -1,4 +1,5 @@
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=ch.ricardo.project%3AToDoList&metric=alert_status)
+![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=ch.ricardo.project%3AToDoList&metric=alert_status)
+![Coverage](https://sonarcloud.io/api/project_badges/measure?project=ch.ricardo.project%3AToDoList&metric=coverage)
 
 # ToDoList
 a very simply ToDo list
@@ -24,12 +25,15 @@ This code provide a very basic REST api for a Simple ToDoList as example, featur
 # How to compile and run
 
 mvn clean install
+
 mvn spring-boot:run
 
 After running you can check the connectivity with a basic Ping call:
+
 http://localhost:8080/ping
 
 And you can try the swagger interface for try the endpoints:
+
 http://localhost:8080/swagger-ui.html
 
 you have also the Spring actuator's endpoints:

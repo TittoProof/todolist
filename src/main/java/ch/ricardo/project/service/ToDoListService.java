@@ -66,6 +66,9 @@ public class ToDoListService {
      */
     public List<ToDoList> getAllToDoList() {
         logger.info("getting all the ToDoList stored");
-        return this.toDoListRepository.findAll();
+        List<ToDoList> results = this.toDoListRepository.findAll();
+        if(logger.isDebugEnabled())
+            logger.debug("the results of getAllList is {}", results.size());
+        return results;
     }
 }

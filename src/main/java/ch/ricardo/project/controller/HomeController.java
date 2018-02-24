@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.ricardo.project.service.TaskService;
 import ch.ricardo.project.service.ToDoListService;
 import javax.websocket.server.PathParam;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Just a simple rest controller for spring
@@ -34,13 +36,18 @@ public class HomeController {
     @Timed
     @RequestMapping(path = "/todolist/getall", method = RequestMethod.GET)
     public List<ToDoList> getAllList() {
-        return this.toDoListService.getAllToDoList();
+        List<ToDoList> results = this.toDoListService.getAllToDoList();
+        if(logger.isDebugEnabled())
+            logger.debug("result size is {}", results.size());
+        return results;
     }
     
     @Timed
     @RequestMapping(path = "/todolist/{id}", method = RequestMethod.GET)
-    public ToDoList getList(@PathParam("id") int id) {
-        return this.toDoListService.getToDoList(id);
+    public ToDoList getList(@PathVariable("id") String id) {
+        if(logger.isDebugEnabled())
+            logger.debug("Getting specific ToDoList with ID: {}", id);
+        return this.toDoListService.getToDoList(Integer.parseInt(id));
     }
     
     @Timed
@@ -51,8 +58,10 @@ public class HomeController {
     
     @Timed
     @RequestMapping(path = "/todolist/{id}", method = RequestMethod.DELETE)
-    public void deleteList(@PathParam("id") int id) {
-        this.toDoListService.removeToDoList(id);
+    public void deleteList(@PathVariable("id") String id) {
+        if(logger.isDebugEnabled())
+            logger.debug("Deleting specific ToDoList with ID: {}", id);
+        this.toDoListService.removeToDoList(Integer.parseInt(id));
     }
     
     @Timed
@@ -60,5 +69,7 @@ public class HomeController {
     public ToDoList createList(@RequestBody ToDoList list) {
         return this.toDoListService.createToDoList(list);
     }
+    
+    // get list by author
 
 }

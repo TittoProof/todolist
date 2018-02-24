@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PingController {
-        @Timed
-	@RequestMapping("/ping")
-	public String ping(){
-		return "pong";
-	}
+
+    @Timed
+    @RequestMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
 }

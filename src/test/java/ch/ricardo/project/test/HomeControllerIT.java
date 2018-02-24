@@ -63,6 +63,7 @@ public class HomeControllerIT {
     @Test
     public void getListIT() {
         given().log().all().when().pathParam("id", this.todayList.getId()).get("/ricardo/todolist/{id}").then().assertThat().statusCode(200).body("name", equalTo("today"));
+        given().log().all().when().pathParam("id", "55").get("/ricardo/todolist/{id}").then().assertThat().statusCode(404);
     }
 
     @Test

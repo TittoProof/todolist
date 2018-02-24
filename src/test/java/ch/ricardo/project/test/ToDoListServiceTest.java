@@ -8,6 +8,7 @@ import ch.ricardo.project.service.ToDoListService;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -78,6 +79,8 @@ public class ToDoListServiceTest {
         assertNotNull(retrieved);
         assertEquals(this.todayList.getId(), retrieved.getId());
         assertEquals(this.todayList.getName(), retrieved.getName());
+        ToDoList notFound = this.toDoListService.getToDoList(55);
+        assertNull(notFound);
     }
     
     @Test

@@ -38,7 +38,8 @@ public class ToDoListService {
      */
     public ToDoList getToDoList(int id) {
         logger.info("getting ToDoList with id: {}", id);
-        return this.toDoListRepository.findOne(id);
+        ToDoList list =  this.toDoListRepository.findOne(id);
+        return list;
     }
     
     /**
@@ -74,6 +75,8 @@ public class ToDoListService {
     
     /**
      * Get the lists of the user
+     * @param user
+     * @return 
      */
     public List<ToDoList> getListForUser(String user) {
         logger.info("getting lists for the user: {}", user);

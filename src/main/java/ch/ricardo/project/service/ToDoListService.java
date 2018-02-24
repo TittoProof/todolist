@@ -71,4 +71,15 @@ public class ToDoListService {
             logger.debug("the results of getAllList is {}", results.size());
         return results;
     }
+    
+    /**
+     * Get the lists of the user
+     */
+    public List<ToDoList> getListForUser(String user) {
+        logger.info("getting lists for the user: {}", user);
+        List<ToDoList> results = this.toDoListRepository.findByOwner(user);
+        if(logger.isDebugEnabled())
+            logger.debug("the results of getAllList is {}", results.size());
+        return results;
+    }
 }

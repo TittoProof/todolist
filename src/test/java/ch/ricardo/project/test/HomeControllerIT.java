@@ -84,5 +84,12 @@ public class HomeControllerIT {
         newList.setOwner("me");
         given().log().all().when().body(newList).contentType("application/json").post("/ricardo/todolist").then().assertThat().statusCode(200).body("owner", equalTo("me"));
     }
+    
+    @Test
+    public void getByUserIT() {
+        given().log().all().when().pathParam("user", "Tiziano").get("/ricardo/todolist/users/{user}").then().assertThat().statusCode(200).body("size()", is(1));
+        given().log().all().when().pathParam("user", "Titto").get("/ricardo/todolist/users/{user}").then().assertThat().statusCode(200).body("size()", is(1));
+        given().log().all().when().pathParam("user", "fake").get("/ricardo/todolist/users/{user}").then().assertThat().statusCode(200).body("size()", is(0));
+    }
 
 }

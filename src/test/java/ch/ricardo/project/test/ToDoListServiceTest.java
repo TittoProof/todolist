@@ -104,5 +104,11 @@ public class ToDoListServiceTest {
         this.toDoListRepository.save(new ToDoList());
         assertEquals(2, this.toDoListService.getAllToDoList().size());
     }
+    
+    @Test
+    public void getAllByUserTest() {
+        assertEquals(1, this.toDoListService.getListForUser("Tiziano").size());
+        assertEquals(0, this.toDoListService.getListForUser("fake user").size());
+    } 
 
 }

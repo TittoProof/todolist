@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import ch.ricardo.project.service.TaskService;
 import ch.ricardo.project.service.ToDoListService;
-import javax.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * Just a simple rest controller for spring
@@ -70,6 +68,10 @@ public class HomeController {
         return this.toDoListService.createToDoList(list);
     }
     
-    // get list by author
+   @Timed
+   @RequestMapping(path = "/todolist/users/{user}", method = RequestMethod.GET)
+   public List<ToDoList> getToDoListByUser(@PathVariable("user") String user) {
+       return this.toDoListService.getListForUser(user);
+   }
 
 }

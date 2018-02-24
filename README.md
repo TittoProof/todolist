@@ -1,4 +1,5 @@
-https://sonarcloud.io/api/project_badges/measure?project=ch.ricardo.project%3AToDoList&metric=alert_status
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=ch.ricardo.project%3AToDoList&metric=alert_status)
+
 # ToDoList
 a very simply ToDo list
 

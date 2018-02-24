@@ -13,7 +13,6 @@
           org.springframework.web,
           sun.reflect,
           net.sf.cglib,
-          ByCGLIB,
           com.sun.xml.internal,
           java.util.concurrent
         }</pattern>

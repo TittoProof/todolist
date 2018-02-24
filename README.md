@@ -25,7 +25,11 @@ This code provide a very basic REST api for a Simple ToDoList as example, featur
 
 mvn clean install
 
-mvn spring-boot:run
+mvn spring-boot:run (without Docker)
+
+launch ./dockerbuild.sh
+
+docker run -p 8080:8080 todolist
 
 After running you can check the connectivity with a basic Ping call:
 

@@ -19,7 +19,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="ch.ricardo" level="debug" additivity="false">
+	<logger name="com.aegidea" level="debug" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
 

@@ -1,7 +1,7 @@
-package ch.ricardo.project.controller;
+package com.aegidea.project.controller;
 
-import ch.ricardo.project.entity.ToDoList;
-import ch.ricardo.project.exceptions.ToDoListNotFoundException;
+import com.aegidea.project.entity.ToDoList;
+import com.aegidea.project.exceptions.ToDoListNotFoundException;
 import com.codahale.metrics.annotation.Timed;
 import java.util.List;
 import org.slf4j.Logger;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import ch.ricardo.project.service.ToDoListService;
+import com.aegidea.project.service.ToDoListService;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author Tiziano (Titto) Fortin <tiz.fortin@gmail.com>
  */
 @RestController
-@RequestMapping("/ricardo")
+@RequestMapping("/aegidea")
 public class HomeController {
 
     private final static Logger logger = LoggerFactory.getLogger(HomeController.class);

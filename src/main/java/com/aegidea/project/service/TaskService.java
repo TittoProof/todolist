@@ -1,7 +1,7 @@
-package ch.ricardo.project.service;
+package com.aegidea.project.service;
 
-import ch.ricardo.project.entity.Task;
-import ch.ricardo.project.repository.TaskRepository;
+import com.aegidea.project.entity.Task;
+import com.aegidea.project.repository.TaskRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

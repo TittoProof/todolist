@@ -1,6 +1,6 @@
-package ch.ricardo.project.controller;
+package com.aegidea.project.controller;
 
-import ch.ricardo.project.exceptions.ToDoListNotFoundException;
+import com.aegidea.project.exceptions.ToDoListNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

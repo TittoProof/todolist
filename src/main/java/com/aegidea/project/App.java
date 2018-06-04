@@ -6,7 +6,7 @@
  * after start, try to launch http://localhost:8080/ping
  * and for swagger http://localhost:8080/swagger-ui.html
  */
-package ch.ricardo.project;
+package com.aegidea.project;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

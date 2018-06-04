@@ -1,4 +1,4 @@
-package ch.ricardo.project.entity;
+package com.aegidea.project.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

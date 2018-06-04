@@ -1,4 +1,4 @@
-package ch.ricardo.project.controller;
+package com.aegidea.project.controller;
 
 import com.codahale.metrics.annotation.Timed;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package ch.ricardo.project.exceptions;
+package com.aegidea.project.exceptions;
 
 /**
  * 

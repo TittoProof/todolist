@@ -1,10 +1,10 @@
-package ch.ricardo.project.test;
+package com.aegidea.project.test;
 
-import ch.ricardo.project.entity.Task;
-import ch.ricardo.project.entity.ToDoList;
-import ch.ricardo.project.repository.TaskRepository;
-import ch.ricardo.project.repository.ToDoListRepository;
-import ch.ricardo.project.service.ToDoListService;
+import com.aegidea.project.entity.Task;
+import com.aegidea.project.entity.ToDoList;
+import com.aegidea.project.repository.TaskRepository;
+import com.aegidea.project.repository.ToDoListRepository;
+import com.aegidea.project.service.ToDoListService;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

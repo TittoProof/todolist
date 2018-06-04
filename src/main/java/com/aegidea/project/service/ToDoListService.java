@@ -1,7 +1,7 @@
-package ch.ricardo.project.service;
+package com.aegidea.project.service;
 
-import ch.ricardo.project.entity.ToDoList;
-import ch.ricardo.project.repository.ToDoListRepository;
+import com.aegidea.project.entity.ToDoList;
+import com.aegidea.project.repository.ToDoListRepository;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
